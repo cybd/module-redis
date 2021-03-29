@@ -35,6 +35,8 @@ use Predis\Client as RedisDriver;
  *            port: 6379
  *            database: 0
  *            cleanupBefore: 'never'
+ *            username: 'user'
+ *            password: 'pass'
  * ```
  *
  * ## Public Properties
@@ -86,7 +88,9 @@ class Redis extends CodeceptionModule implements RequiresPackage
             $this->driver = new RedisDriver([
                 'host'     => $this->config['host'],
                 'port'     => $this->config['port'],
-                'database' => $this->config['database']
+                'database' => $this->config['database'],
+                'username' => $this->config['username'],
+                'password' => $this->config['password'],
             ]);
         } catch (\Exception $e) {
             throw new ModuleException(
