@@ -1,5 +1,5 @@
 {
-    "name":"codeception/module-redis",
+    "name":"cybd/module-redis",
     "description":"Redis module for Codeception",
     "keywords":["codeception", "redis"],
     "homepage":"http://codeception.com/",
